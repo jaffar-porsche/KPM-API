@@ -34,7 +34,25 @@ Why it matters:
 - Integration readiness is broader than transport-layer or certificate readiness.
 - The user can be technically registered yet still lack the required functional permissions.
 
-### 3. GSBR Party confirmation
+### 3. KPM postbox read and write access
+
+Still required:
+
+- Request read and write access for the technical user to the relevant project-specific postboxes in KPM.
+- Route the request through Defect Management.
+- Explicitly confirm that the request covers the technical user, not only comparable personal-user rights.
+
+Named contacts from the original task:
+
+- Maximilian Burkhard
+- Bianca Luga
+
+Why it matters:
+
+- This was part of the original team task, not an optional follow-up.
+- GSBR readiness does not automatically grant KPM functional access.
+
+### 4. GSBR Party confirmation
 
 Still required:
 
@@ -45,7 +63,7 @@ Context:
 - Fabian indicated that KPM Defect Manager already has a direct KPM connection through GSB.
 - That may reduce ambiguity about the correct Party or existing integration path.
 
-### 4. SIR creation confirmation
+### 5. SIR creation confirmation
 
 Still required:
 
@@ -64,8 +82,9 @@ Use this checklist to close the setup professionally:
 2. Confirm the connector-contract owner and request path.
 3. Confirm the correct KPM cluster.
 4. Confirm the exact KPM roles needed for the integration use case.
-5. Confirm SIR creation and capture the reference identifier if one exists.
-6. Store the final operational artifacts in a durable team location.
+5. Submit and confirm KPM postbox read/write access for the technical user.
+6. Confirm SIR creation and capture the reference identifier if one exists.
+7. Store the final operational artifacts in a durable team location.
 
 ## Lessons Learned
 
@@ -90,7 +109,7 @@ The practical identity used for downstream GSB handling is the fully qualified C
 
 ### Parallelize related tracks
 
-Connector-contract work, role assignment, and GSBR registration should be pursued in parallel when possible. They are related but not identical processes.
+Connector-contract work, role assignment, KPM postbox authorization, and GSBR registration should be pursued in parallel when possible. They are related but not identical processes.
 
 ## Recommended Future Improvements
 
@@ -98,3 +117,4 @@ Connector-contract work, role assignment, and GSBR registration should be pursue
 2. Add the confirmed Party name once officially validated.
 3. Add the confirmed connector-contract details once assigned.
 4. Add the final KPM role model once approved.
+5. Add the confirmed KPM postbox scope once Defect Management approves it.

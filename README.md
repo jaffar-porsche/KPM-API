@@ -2,6 +2,13 @@
 
 This repository is the working reference for registering and operating access to the KPM API through GSBR for the EVG7 application context. It converts the original request history into a reusable setup guide so future technical-user onboarding does not depend on email threads or individual memory.
 
+## Original Task
+
+The original request had two separate deliverables:
+
+1. Register the application and technical user in GSBR and sign a contract with `volkswagenag.com/PP/QM/GroupProblemManagementService/V3`.
+2. Request read and write access for the technical user to the relevant project-specific postboxes in KPM through Defect Management.
+
 ## Purpose
 
 This repository documents how to register a technical user as a consumer of the KPM API:
@@ -18,7 +25,8 @@ This repository covers:
 2. The end-to-end setup sequence.
 3. The GSBR, certificate, and SIR dependencies.
 4. The key contacts involved in the process.
-5. The open parallel workstreams that are still required.
+5. The separate KPM postbox access requirement alongside the GSBR workstream.
+6. The open parallel workstreams that are still required.
 6. Lessons learned for future repetitions.
 
 ## Document Index
@@ -39,7 +47,7 @@ The process is not a single GSBR-only action. It crosses several systems and app
 4. Set up a valid shared reminder mailbox.
 5. Request and receive the Soft-PSE certificate.
 6. Send the fully qualified CN for SIR creation.
-7. Complete parallel items such as connector-contract setup and KPM role assignment.
+7. Complete parallel items such as connector-contract setup, KPM role assignment, and KPM postbox access.
 
 ## Core Dependency Rule
 
@@ -64,7 +72,7 @@ The setup order matters:
 
 ## Operational Note
 
-GSBR registration, certificate provisioning, connector-contract setup, and KPM authorization are related but separate workstreams. They should be coordinated in parallel when possible rather than treated as one serial request.
+GSBR registration, certificate provisioning, connector-contract setup, KPM role assignment, and KPM postbox authorization are related but separate workstreams. They should be coordinated in parallel when possible rather than treated as one serial request.
 
 ## Recommended Use
 

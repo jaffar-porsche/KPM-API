@@ -1,10 +1,10 @@
 # Setup Process
 
-This runbook describes the end-to-end process used to prepare KPM API access via GSBR for the EVG7 technical user.
+This runbook describes the end-to-end process used to prepare KPM API access via GSBR for the EVG7 technical user, alongside the separate KPM authorization work needed for functional use.
 
 ## Process Overview
 
-The consumer registration path is not limited to GSBR. It requires coordination across application ownership, TAM user creation, VW PKI certificate provisioning, and GSB-side SIR creation.
+The consumer registration path is not limited to GSBR. It requires coordination across application ownership, TAM user creation, VW PKI certificate provisioning, GSB-side SIR creation, and separate KPM-side authorization for postbox access.
 
 ## 1. Understand The GSBR Structure
 
@@ -157,6 +157,23 @@ Current status:
 
 - Waiting for confirmation that the SIR has been created.
 
+## 10. Request KPM Read And Write Access To Relevant Postboxes
+
+This is a separate requirement from GSBR registration and must not be assumed complete just because the technical user and certificate exist.
+
+Requested target outcome:
+
+- Read and write access for the technical user to the relevant project-specific postboxes in KPM
+
+Responsible path:
+
+- Request through Defect Management
+- Primary contacts mentioned in the original task: Maximilian Burkhard and Bianca Luga
+
+Important note:
+
+- The KPM role and cluster discussion is related, but the postbox access itself should be explicitly requested and explicitly confirmed.
+
 ## Why The Sequence Matters
 
 The key dependency chain is:
@@ -168,5 +185,6 @@ The key dependency chain is:
 5. Soft-PSE certificate
 6. Fully qualified CN
 7. SIR creation
+8. KPM postbox read/write authorization
 
 Skipping or reordering these steps leads to avoidable delays, especially at the certificate and strong-authentication boundary.
